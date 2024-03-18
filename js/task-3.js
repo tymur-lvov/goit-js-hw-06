@@ -10,17 +10,15 @@ class StringBuilder {
   }
 
   padStart(str) {
-    this.#value = this.#value.padStart(this.#value.length + str.length, str);
+    this.#value = str + this.#value;
   }
 
   padEnd(str) {
-    this.#value = this.#value.padEnd(this.#value.length + str.length, str);
+    this.#value = this.#value + str;
   }
 
   padBoth(str) {
-    this.#value = this.#value.padStart(this.#value.length + str.length, str);
-
-    this.#value = this.#value.padEnd(this.#value.length + str.length, str);
+    this.#value = str + this.#value + str;
   }
 }
 
